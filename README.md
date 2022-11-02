@@ -7,6 +7,7 @@ Golang静态资源服务
 var assets embed.FS
 
 func main() {
+	//本地服务，默认端口80
 	server := microService.NewAssetsHttpServer()
 	server.AssetsFSName = "assets" //指定资源目录名
 	server.Assets = &assets
@@ -14,4 +15,7 @@ func main() {
 	fmt.Println(err)
 }
 
+http://localhost/xxx.png
+
 ```
+
